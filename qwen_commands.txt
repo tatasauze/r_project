@@ -1,0 +1,9 @@
+R -e "library(R.matlab)"
+R -e "install.packages('R.matlab', repos='https://cran.rstudio.com/', dependencies=TRUE)"
+R -e "library(R.matlab); cat('R.matlab library is installed and loaded successfully.\\n')"
+R -e "library(Matrix); cat('Matrix library is available.\\n')"
+Rscript test_conversion.R
+Rscript validate_r_implementation.R
+Rscript detailed_verification.R
+history | tail -20
+cat /dev/null
